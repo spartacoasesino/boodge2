@@ -1,0 +1,48 @@
+{
+	"categories": [
+		{
+			"uuid": "40c6004b-7820-4c05-a035-14ad09a72c70",
+			"title": "Tareas",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "224080fc-42a3-4fa1-9d2b-0611e5c67377",
+			"title": "Por hacer",
+			"tasks": []
+		},
+		{
+			"uuid": "f2159db5-1222-4bf2-8e40-82df068d2ec3",
+			"title": "Haciendo",
+			"tasks": []
+		},
+		{
+			"uuid": "bc1986a7-94f2-4136-b7d7-9bfce150c0a7",
+			"title": "Hecho",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "faaeef32-0c87-486d-9b4c-43abec2d7c02",
+			"title": "",
+			"description": "",
+			"category": "40c6004b-7820-4c05-a035-14ad09a72c70",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"224080fc-42a3-4fa1-9d2b-0611e5c67377"
+			],
+			[
+				"f2159db5-1222-4bf2-8e40-82df068d2ec3"
+			],
+			[
+				"bc1986a7-94f2-4136-b7d7-9bfce150c0a7"
+			]
+		]
+	}
+}
