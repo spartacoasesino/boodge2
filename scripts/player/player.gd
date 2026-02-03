@@ -5,8 +5,11 @@ extends CharacterBody3D
 
 func _physics_process(delta):
 	velocity.y -= gravity * delta
+	velocity.z = 0
 
 	if Input.is_action_just_pressed("jump"):
 		velocity.y = jump_force
+	
+	global_position.z = 0
 
 	move_and_slide()
