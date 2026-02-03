@@ -13,3 +13,12 @@ func _physics_process(delta):
 	global_position.z = 0
 
 	move_and_slide()
+
+var is_dead := false
+
+func die():
+	if is_dead:
+		return
+	is_dead = true
+	velocity = Vector3.ZERO
+	set_physics_process(false)

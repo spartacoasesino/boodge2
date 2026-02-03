@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cba8ia6op07ox"]
+
+[ext_resource type="Script" uid="uid://c01uc1u02nqpy" path="res://scripts/obstacles/obstacle.gd" id="1_bqhqs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gryq1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bqhqs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_admj0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bqqh7"]
+
+[node name="Obstacle" type="Node3D" unique_id=1702456495]
+script = ExtResource("1_bqhqs")
+
+[node name="Top" type="Node3D" parent="." unique_id=834613446]
+transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Top" unique_id=719423667]
+mesh = SubResource("BoxMesh_gryq1")
+
+[node name="Area3D" type="Area3D" parent="Top" unique_id=1175109221]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Top/Area3D" unique_id=161726373]
+shape = SubResource("BoxShape3D_bqhqs")
+
+[node name="Bottom" type="Node3D" parent="." unique_id=963476146]
+transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 1, 0, -4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bottom" unique_id=861832196]
+mesh = SubResource("BoxMesh_admj0")
+
+[node name="Area3D" type="Area3D" parent="Bottom" unique_id=63277395]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bottom/Area3D" unique_id=421863937]
+shape = SubResource("BoxShape3D_bqqh7")
+
+[connection signal="body_entered" from="Top/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Bottom/Area3D" to="." method="_on_area_3d_body_entered"]
